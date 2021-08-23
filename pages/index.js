@@ -1,6 +1,4 @@
-import Card from "../components/ui/Card";
 import MeetupList from "../components/meetups/MeetupList";
-import { useEffect, useState } from "react";
 
 const DUMMY_MEETUPS = [
   {
