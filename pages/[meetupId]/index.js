@@ -11,14 +11,15 @@ function DetailsPage() {
   );
 }
 
-export async function getStaticPaths(){
+// used this to generate the dynamic meetup pages at the build time only.
+export async function getStaticPaths() {
   return {
+    fallback: false,
     paths: [
-      {params: {meetupId: 'first'}},
-      {params: {meetupId: 'second'}},
+      { params: { meetupId: "first" } },
+      { params: { meetupId: "second" } },
     ],
-    fallback: false
-  }
+  };
 }
 
 export async function getStaticProps(context) {
